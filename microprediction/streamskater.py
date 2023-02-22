@@ -215,7 +215,7 @@ class CompetitionsStreamSkater(StreamSkater):
         return ('~' not in name) and (('faang' in name) or ('sateb_' in name) or ('gnaaf' in name) or ('c2' in name) or ('c5' in name)  or ('fathom' in name) or ('xray' in name) or ('yarx' in name) or ('electricity' in name))
 
     def include_delay(self, delay=None, name=None, **ignore):
-        return delay>=self.delays[2]
+        return delay>=self.DELAYS[2]
 
 
 class CompetitiveSkatingFox(SkatingFox):
@@ -230,4 +230,4 @@ class CompetitiveSkatingFox(SkatingFox):
                                 'electricity' in name))
 
     def include_delay(self, delay=None, name=None, **ignore):
-        return delay >= self.delays[2]
+        return delay >= self.DELAYS[2]
